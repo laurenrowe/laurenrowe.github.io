@@ -5,3 +5,22 @@ color: black;
 width: 320px;
 padding: 10px 10px 10px 10px;
 }
+
+.newstitle {
+  background-color: pink;
+  padding: 10px 10px 10px 10px;
+  margin-bottom:15px;
+  margin-right: 15px;
+}
+
+.newssite {
+  background-color: pink;
+  padding: 10px 10px 10px 10px;
+  margin-bottom:15px;
+  margin-right: 15px;
+  float: left;
+}
+
+.clear{
+  clear:left
+}
