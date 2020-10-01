@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href= "site.css">
     <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
-    <script>
 
+    <script>
 
   window.onload = function() {
     // functions that run after page loads
     displayGreeting();
     fetchWeather(85719);
+    displayRSSFeed();
   }
   // display good morning, afternoon or evening based on the time
   function displayGreeting() {
@@ -27,12 +28,13 @@
     }
     document.getElementById("greeting").innerHTML = "Good " + description;
   }
+
   // get weather data from openweathermap and display the current temp
   function fetchWeather() {
     fetch("https://api.openweathermap.org/data/2.5/weather?zip=85719,US&appid=75c70eac099be543e219dc3ebb23b834&units=imperial")
     .then(function(resp) { return resp.json() })
     .then(function(data) {
-      document.getElementById("weather").innerHTML = "The current temperature is "+ data.main.temp + "&#8457" + " in Tucson,AZ";
+      document.getElementById("weather").innerHTML = "The current temperature is "+ data.main.temp + "&#8457" + " in Tucson, AZ";
     })
     .catch(function() {
       document.getElementById("weather").innerHTML = "Error in fetchWeather function";
