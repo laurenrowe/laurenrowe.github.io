@@ -101,3 +101,9 @@ img {
 .cell_name{
 font-weight: bold;
 }
+
+#mapid {
+  height: 640px;
+  width: 640px;
+  border: 2px solid blue;
+}
